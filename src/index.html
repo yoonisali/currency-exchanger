@@ -10,19 +10,23 @@
   <form id="currencyExchanger">
     <h2>Currency Options:</h2>
     <div id="chooseCurrency">
-      <label><input type="radio" id="GBP" value="GBP" name="currencies">Great Britain Pound</label>
-      <label><input type="radio" id="CAD" value="CAD" name="currencies">Canadian Dollar</label>
-      <label><input type="radio" id="CNY" value="CNY" name="currencies">Chinese Renminbi</label>
-      <label><input type="radio" id="MXN" value="MXN" name="currencies">Mexican Peso</label>
+      <label><input type="radio" id="GBP" value="GBP" name="currencies">Great Britain Pound</label><br>
+      <label><input type="radio" id="CAD" value="CAD" name="currencies">Canadian Dollar</label><br>
+      <label><input type="radio" id="CNY" value="CNY" name="currencies">Chinese Renminbi</label><br>
+      <label><input type="radio" id="MXN" value="MXN" name="currencies">Mexican Peso</label><br>
       <label><input type="radio" id="SOS" value="SOS" name="currencies">Somali Shilling</label>
     </div>
     <div id="chooseAmount">
-      <p>Enter an Amount:</p>
+      <h2>Enter an Amount:</h2>
       <input type="number" id="dollar" placeholder="Enter amount in USD...">
+      <br>
       <button type="submit" id="btn">Submit!</button>
-
     </div>
   </form>
+  <div id="display">
+    <h2>Exchange Rate:</h2>
+    <p id="displayExchange"></p>
+  </div>
 </body>
 
 </html>

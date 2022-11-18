@@ -1,17 +1,14 @@
 export default class CurrencyExchangerService {
   static async getRates() {
-      return fetch(
-        ` https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`
-      )
-      .then(function(response) {
-        if (!response.ok) {
-          throw Error(response.statusText);
-        } 
-        return response.json();
-      })
-     .catch (function(error) {
-      return error;
-     }) 
+    const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
+    const jsonifiedResponse = await response.json();
+    if (!response.ok) {
+      const errorMessage = `${response.status} ${respone.statusText} ${jsonifiedResponse.message}`;
+      throw new Error(errorMessage);
     }
+    return jsonifiedResponse;
   }
-
+  catch(error) {
+    return error;
+  }
+}

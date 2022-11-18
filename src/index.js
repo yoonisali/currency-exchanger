@@ -1,3 +1,5 @@
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import "./css/styles.css";
 import CurrencyExchangerService from "./js/currencyAPI.js";
 
@@ -16,8 +18,9 @@ async function getRates(currency) {
 const printElements = (response, currency) => {
   let value = document.querySelector("input:checked.currencies").value;
   let dollar = document.getElementById("dollar").value;
+  let sosRounded = `${response.conversion_rates.SOS * dollar}S`.toFixed(1);
   if (value === "SOS") {
-    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.SOS * dollar}S`;
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${sosRounded.toFixed()}`;
   } else if (value === "GBP") {
     document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.GBP * dollar}£`;
   } else if (value === "CAD") {

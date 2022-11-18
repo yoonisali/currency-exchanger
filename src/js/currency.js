@@ -1,1 +1,1 @@
-e
+export default class 

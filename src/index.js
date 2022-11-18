@@ -17,11 +17,15 @@ const printElements = (response, currency) => {
   let value = document.querySelector("input:checked.currencies").value;
   let dollar = document.getElementById("dollar").value;
   if (value === "SOS") {
-    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.SOS * dollar}`;
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.SOS * dollar}S`;
   } else if (value === "GBP") {
-    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.GBP * dollar}`;
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.GBP * dollar}£`;
   } else if (value === "CAD") {
-    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.CAD * dollar}`;
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.CAD * dollar}$`;
+  } else if (value === "CNY") {
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.CNY * dollar}¥`;
+  } else if (value === "MXN") {
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.MXN * dollar}₱`;
   }
   console.log
   console.log(response.conversion_rates.SOS * dollar);

@@ -2,11 +2,27 @@
 <html lang="en">
 
 <head>
-  <title>Document</title>
+  <title>Currency-Exchanger</title>
 </head>
 
 <body>
-  <h1>Blue Print</h1>
+  <h1>Currency Exchanger!</h1>
+  <form id="currencyExchanger">
+    <h2>Currency Options:</h2>
+    <div id="chooseCurrency">
+      <label><input type="radio" id="GBP" value="GBP" name="currencies">Great Britain Pound</label>
+      <label><input type="radio" id="CAD" value="CAD" name="currencies">Canadian Dollar</label>
+      <label><input type="radio" id="CNY" value="CNY" name="currencies">Chinese Renminbi</label>
+      <label><input type="radio" id="MXN" value="MXN" name="currencies">Mexican Peso</label>
+      <label><input type="radio" id="SOS" value="SOS" name="currencies">Somali Shilling</label>
+    </div>
+    <div id="chooseAmount">
+      <p>Enter an Amount:</p>
+      <input type="number" id="dollar" placeholder="Enter amount in USD...">
+      <button type="submit" id="btn">Submit!</button>
+
+    </div>
+  </form>
 </body>
 
 </html>

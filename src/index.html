@@ -6,36 +6,31 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="jumbotron">
-    <h1>Currency Exchanger!</h1>
-    </div>
-    <form id="currencyExchanger">
 
-      <div class="card" style="width: auto; text-align: center;">
-        <div class="card-body">
-            <h2 class="card-title"></h2>Currency Options:</h2>
-            <div id="chooseCurrency">
-              <label><input type="radio" id="GBP" value="GBP" class="currencies" name="currencies">Great BritainPound</label><br>
-              <label><input type="radio" id="CAD" value="CAD" class="currencies" name="currencies">Canadian Dollar</label><br>
-              <label><input type="radio" id="CNY" value="CNY" class="currencies" name="currencies">Chinese Renminbi</label><br>
-              <label><input type="radio" id="MXN" value="MXN" class="currencies" name="currencies">Mexican Peso</label><br>
-              <label><input type="radio" id="SOS" value="SOS" class="currencies" name="currencies">Somali Shilling</label>
-            </div>
-        </div>
-      </div>
-      <div id="chooseAmount">
-        <h2>Enter an Amount:</h2>
-        <input type="number" id="dollar" placeholder="Enter amount in USD...">
-        <br>
-        <button type="submit" id="btn">Submit!</button>
-      </div>
-    </form>
-    <div id="display">
-      <h2>Exchange Rate:</h2>
-      <p id="displayExchange"></p>
+  <h1>Currency Exchanger!</h1>
+  <form id="currencyExchanger">
+    </h2>Currency Options:</h2>
+    <div id="chooseCurrency">
+      <label><input type="radio" id="GBP" value="GBP" class="currencies" name="currencies">Great
+        BritainPound</label><br>
+      <label><input type="radio" id="CAD" value="CAD" class="currencies" name="currencies">Canadian Dollar</label><br>
+      <label><input type="radio" id="CNY" value="CNY" class="currencies" name="currencies">Chinese Renminbi</label><br>
+      <label><input type="radio" id="MXN" value="MXN" class="currencies" name="currencies">Mexican Peso</label><br>
+      <label><input type="radio" id="SOS" value="SOS" class="currencies" name="currencies">Somali Shilling</label>
     </div>
+
+    <div id="chooseAmount">
+      <h2>Enter an Amount:</h2>
+      <input type="number" id="dollar" placeholder="Enter amount in USD...">
+      <br>
+      <button type="submit" id="btn">Submit!</button>
+    </div>
+  </form>
+  <div id="display">
+    <h2>Exchange Rate:</h2>
+    <p id="displayExchange"></p>
   </div>
+
 </body>
 
 </html>

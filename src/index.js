@@ -1,5 +1,5 @@
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 import CurrencyExchangerService from "./js/currencyAPI.js";
 
@@ -18,22 +18,22 @@ async function getRates(currency) {
 const printElements = (response, currency) => {
   let value = document.querySelector("input:checked.currencies").value;
   let dollar = document.getElementById("dollar").value;
-  let sosRounded = `${response.conversion_rates.SOS * dollar}S`.toFixed(1);
+  let sosRounded = parseInt(`${response.conversion_rates.SOS * dollar}`).toFixed(1);
+  let gbpRounded = parseInt(`${response.conversion_rates.GBP * dollar}`).toFixed(1);
+  let cadRounded = parseInt(`${response.conversion_rates.CAD * dollar}`).toFixed(1);
+  let cnyRounded = parseInt(`${response.conversion_rates.CNY * dollar}`).toFixed(1);
+  let mxnRounded = parseInt(`${response.conversion_rates.MXN * dollar}`).toFixed(1);
   if (value === "SOS") {
-    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${sosRounded.toFixed()}`;
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${sosRounded}S`;
   } else if (value === "GBP") {
-    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.GBP * dollar}£`;
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${gbpRounded}£`;
   } else if (value === "CAD") {
-    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.CAD * dollar}$`;
-  } else if (value === "CNY") {
-    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.CNY * dollar}¥`;
-  } else if (value === "MXN") {
-    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${response.conversion_rates.MXN * dollar}₱`;
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${cadRounded}$`;
+  } else if (value === "CNY") { 
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${cnyRounded}¥`;
+  } else if (value === "MXN") { 
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${mxnRounded}₱`;
   }
-  console.log
-  console.log(response.conversion_rates.SOS * dollar);
-  console.log(response.conversion_rates.GBP * dollar);
-  console.log(response.conversion_rates.CAD * dollar);
 };
 
 const printError = (error, currency) => {

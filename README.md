@@ -1,29 +1,35 @@
-# (Application Name)
+# Currency Exchanger
 
-#### (Brief Description of Application)
+#### A project that will exchnage currencies.
 
-#### By (Your Name Here)
+#### By Yoonis Ali
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _HTML_
+* _CSS_
+* _JavaScript_
+* _Jest_
+* _Babel_
+* _Webpack_
+* _ES Lint_
 
 ## Description
+This project will caluclate the inputted amount in USD and convert it to the user's choice of currency. 
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Clone to your desktop_
+* _Open terminal_
+* _Run_: `npm install`
+* _Run_: `npm run build`
+* _Run_: `npm run start`
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _None_
 
 ## License
+MIT
+
+Copyright (c) 2022 Yoonis Ali

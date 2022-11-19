@@ -1,14 +1,70 @@
 body {
   text-align: center;
-  background-image: url("../assets/images/giphy.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  font-weight: bold;
+  font-family: 'Vidaloka', serif;
+  background-color: #967BB6;
+  color: #9BB67B;
+ 
+  
 }
 
 #dollar {
   text-align: center;
-  font-weight: bold;
   margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 80px;
+  text-shadow: 5px 3px black;
+  padding-bottom: 90px;
+  padding-top: 30px;
+
+}
+
+h2 {
+  font-size: 40px;
+  text-shadow: 3px 1px black;
+}
+
+label {
+  font-size: 20px;
+  text-shadow: 2px 1px black;
+}
+
+button {
+  background-color:#9BB67B;
+  color: #967BB6;
+  font-size: 22px;
+  text-shadow: 1px 1px black;
+  margin-bottom: 20px;
+}
+
+#currencyExchanger {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+#inputWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 190px;
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 90px;
+}
+
+#display {
+  padding-top: 50px;
+}
+
+#displayExchange {
+  font-size: 20px;
+  text-shadow: 2px 1px black;
 }

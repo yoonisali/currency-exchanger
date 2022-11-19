@@ -24,7 +24,7 @@ const printElements = (response, currency) => {
   let cnyRounded = parseInt(`${response.conversion_rates.CNY * dollar}`).toFixed(1);
   let mxnRounded = parseInt(`${response.conversion_rates.MXN * dollar}`).toFixed(1);
   if (value === "SOS") {
-    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${sosRounded}S`;
+    document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${sosRounded}$`;
   } else if (value === "GBP") {
     document.getElementById("displayExchange").innerHTML = `The currency exchange from USD to ${currency} is: ${gbpRounded}£`;
   } else if (value === "CAD") {
